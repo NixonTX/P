@@ -17,13 +17,16 @@
         display: flex; 
         flex-direction: row; 
         align-items: flex-start; 
-        width: 60%;">
+        width: 60%;
+        max-width: 900px;
+        flex-wrap: wrap;">
         
         <div class="icon-and-sign-log" style="
             display: flex; 
             flex-direction: row; 
             gap: 20px; 
-            align-items: center">
+            align-items: center;
+            flex-wrap: wrap;">
             
             <div class="icon-block" style="
                 background-color: lightblue;
@@ -39,25 +42,38 @@
             
             <div class="for-sign-log" style="
                 display: flex; 
-                width: 600px;
+                flex: 1;
+                min-width: 250px;
                 flex-direction: column; 
                 gap: 10px;">
-                <div class="sign-up-section" style="
+                <button class="sign-up-section" style="
                     padding: 20px;
                     text-align: left;
                     border-radius: 10px; 
-                    background-color: lightgreen;">
+                    background-color: lightgreen;"
+                    onclick="navigateToLogin();">
                     Log In
-                </div>
-                <div class="log-in-section" style="
+                </button>
+                <button class="log-in-section" style="
                     padding: 20px;
                     text-align: left;
                     border-radius: 10px; 
-                    background-color: lightcoral;">
+                    background-color: lightcoral;"
+                    onclick="navigateToSinUp()">
                     Sign Up
-                </div>
+                </button>
             </div>
         </div>
     </div>
 </body>
+
+<script>
+    function navigateToLogin() {
+        window.location.href= "loginPage.html";
+    }
+
+    function navigateToSinUp() {
+        window.location.href= "signupPage.html";
+    }
+</script>
 </html>
